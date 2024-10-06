@@ -42,19 +42,18 @@ def emotion_detector(text_to_analyse):
             'fear': fear_score,
             'joy': joy_score,
             'sadness': sadness_score,
-            'dominant_emotion': dominant_emotion,
-            'status_code': 200   # successful response
+            'dominant_emotion': dominant_emotion
         }
         # Return emotions with their score with the dominant emotion
         return new_response_format
-    else:
-        return {
+    
+    # if response status code is 400(not successful)
+    return {
             'anger': None,
             'disgust': None,
             'fear': None,
             'joy': None,
             'sadness': None,
-            'dominant_emotion': None,
-            'status_code': 400  # Error status
+            'dominant_emotion': None
         }
 
